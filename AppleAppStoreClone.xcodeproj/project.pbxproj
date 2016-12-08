@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1058E61DF8A1A10022D7B2 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1058E51DF8A1A10022D7B2 /* CategoryCell.swift */; };
 		FB6779CF1DF898CB00E23C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6779CE1DF898CB00E23C22 /* AppDelegate.swift */; };
-		FB6779D11DF898CB00E23C22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6779D01DF898CB00E23C22 /* ViewController.swift */; };
+		FB6779D11DF898CB00E23C22 /* FeaturedAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6779D01DF898CB00E23C22 /* FeaturedAppsController.swift */; };
 		FB6779D41DF898CB00E23C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6779D21DF898CB00E23C22 /* Main.storyboard */; };
 		FB6779D71DF898CB00E23C22 /* AppleAppStoreClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB6779D51DF898CB00E23C22 /* AppleAppStoreClone.xcdatamodeld */; };
 		FB6779D91DF898CB00E23C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6779D81DF898CB00E23C22 /* Assets.xcassets */; };
@@ -27,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB1058E51DF8A1A10022D7B2 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FB6779CB1DF898CB00E23C22 /* AppleAppStoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleAppStoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6779CE1DF898CB00E23C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB6779D01DF898CB00E23C22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB6779D01DF898CB00E23C22 /* FeaturedAppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAppsController.swift; sourceTree = "<group>"; };
 		FB6779D31DF898CB00E23C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB6779D61DF898CB00E23C22 /* AppleAppStoreClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppleAppStoreClone.xcdatamodel; sourceTree = "<group>"; };
 		FB6779D81DF898CB00E23C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,12 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				FB6779CE1DF898CB00E23C22 /* AppDelegate.swift */,
-				FB6779D01DF898CB00E23C22 /* ViewController.swift */,
+				FB6779D01DF898CB00E23C22 /* FeaturedAppsController.swift */,
 				FB6779D21DF898CB00E23C22 /* Main.storyboard */,
 				FB6779D81DF898CB00E23C22 /* Assets.xcassets */,
 				FB6779DA1DF898CB00E23C22 /* LaunchScreen.storyboard */,
 				FB6779DD1DF898CB00E23C22 /* Info.plist */,
 				FB6779D51DF898CB00E23C22 /* AppleAppStoreClone.xcdatamodeld */,
+				FB1058E51DF8A1A10022D7B2 /* CategoryCell.swift */,
 			);
 			path = AppleAppStoreClone;
 			sourceTree = "<group>";
@@ -204,9 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB6779D11DF898CB00E23C22 /* ViewController.swift in Sources */,
+				FB6779D11DF898CB00E23C22 /* FeaturedAppsController.swift in Sources */,
 				FB6779D71DF898CB00E23C22 /* AppleAppStoreClone.xcdatamodeld in Sources */,
 				FB6779CF1DF898CB00E23C22 /* AppDelegate.swift in Sources */,
+				FB1058E61DF8A1A10022D7B2 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +420,7 @@
 				FB6779ED1DF898CC00E23C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB6779EE1DF898CC00E23C22 /* Build configuration list for PBXNativeTarget "AppleAppStoreCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				FB6779F01DF898CC00E23C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
