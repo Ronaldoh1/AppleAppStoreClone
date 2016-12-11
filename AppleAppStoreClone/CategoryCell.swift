@@ -21,6 +21,21 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return collectionView
     }()
     
+    let categoryLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Best New Apps"
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let dividerLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.init(white: 0.4, alpha: 0.4)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -35,14 +50,25 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         self.backgroundColor = .clear
         
         addSubview(appsCollectionView)
+        addSubview(dividerLineView)
+        addSubview(categoryLabel)
+        
         
         appsCollectionView.dataSource = self
         appsCollectionView.delegate = self
         
         appsCollectionView.register(AppCell.self, forCellWithReuseIdentifier: cellId)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : categoryLabel]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : appsCollectionView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : appsCollectionView]))
+        
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : dividerLineView]))
+        
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(30)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView, "v1": dividerLineView, "nameLabel": categoryLabel]))
+
+        
     }
     
     // Delegates
@@ -56,7 +82,14 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: frame.height)
+        return CGSize(width: 100, height: frame.height - 32)
+    }
+    
+    //set up  a margin for collectionView
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsetsMake(0, 14, 0, 14)
     }
     
     
