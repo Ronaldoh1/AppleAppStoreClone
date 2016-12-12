@@ -16,6 +16,8 @@
 		FB6779DC1DF898CB00E23C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6779DA1DF898CB00E23C22 /* LaunchScreen.storyboard */; };
 		FB6779E71DF898CC00E23C22 /* AppleAppStoreCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6779E61DF898CC00E23C22 /* AppleAppStoreCloneTests.swift */; };
 		FB72C1661DF98272008D1844 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72C1651DF98272008D1844 /* AppCell.swift */; };
+		FBE35C761DFDB13000B13606 /* AppCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE35C751DFDB13000B13606 /* AppCategory.swift */; };
+		FBE35C781DFDB17300B13606 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE35C771DFDB17300B13606 /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		FB6779E61DF898CC00E23C22 /* AppleAppStoreCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAppStoreCloneTests.swift; sourceTree = "<group>"; };
 		FB6779E81DF898CC00E23C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB72C1651DF98272008D1844 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		FBE35C751DFDB13000B13606 /* AppCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCategory.swift; sourceTree = "<group>"; };
+		FBE35C771DFDB17300B13606 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +87,11 @@
 		FB6779CD1DF898CB00E23C22 /* AppleAppStoreClone */ = {
 			isa = PBXGroup;
 			children = (
-				FB6779CE1DF898CB00E23C22 /* AppDelegate.swift */,
-				FB6779D01DF898CB00E23C22 /* FeaturedAppsController.swift */,
-				FB72C1651DF98272008D1844 /* AppCell.swift */,
-				FB1058E51DF8A1A10022D7B2 /* CategoryCell.swift */,
+				FBE35C741DFDB0F900B13606 /* Controllers */,
+				FBE35C731DFDB0F400B13606 /* Views */,
+				FBE35C721DFDB0EC00B13606 /* Models */,
 				FB6779D21DF898CB00E23C22 /* Main.storyboard */,
+				FB6779CE1DF898CB00E23C22 /* AppDelegate.swift */,
 				FB6779D81DF898CB00E23C22 /* Assets.xcassets */,
 				FB6779DA1DF898CB00E23C22 /* LaunchScreen.storyboard */,
 				FB6779DD1DF898CB00E23C22 /* Info.plist */,
@@ -103,6 +107,32 @@
 				FB6779E81DF898CC00E23C22 /* Info.plist */,
 			);
 			path = AppleAppStoreCloneTests;
+			sourceTree = "<group>";
+		};
+		FBE35C721DFDB0EC00B13606 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBE35C751DFDB13000B13606 /* AppCategory.swift */,
+				FBE35C771DFDB17300B13606 /* App.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FBE35C731DFDB0F400B13606 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB72C1651DF98272008D1844 /* AppCell.swift */,
+				FB1058E51DF8A1A10022D7B2 /* CategoryCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FBE35C741DFDB0F900B13606 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB6779D01DF898CB00E23C22 /* FeaturedAppsController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +245,8 @@
 				FB6779D71DF898CB00E23C22 /* AppleAppStoreClone.xcdatamodeld in Sources */,
 				FB6779CF1DF898CB00E23C22 /* AppDelegate.swift in Sources */,
 				FB1058E61DF8A1A10022D7B2 /* CategoryCell.swift in Sources */,
+				FBE35C781DFDB17300B13606 /* App.swift in Sources */,
+				FBE35C761DFDB13000B13606 /* AppCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
