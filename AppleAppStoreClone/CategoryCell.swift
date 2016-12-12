@@ -17,6 +17,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
             if let name = appCategory?.name {
                 categoryLabel.text = name
             }
+            appsCollectionView.reloadData()
         }
     }
     
@@ -31,7 +32,6 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     let categoryLabel: UILabel = {
         let label = UILabel()
-        label.text = "Best New Apps"
         label.font = UIFont.systemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

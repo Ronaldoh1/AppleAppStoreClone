@@ -12,6 +12,7 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
     
     let cellIdentifer = "cellID"
     let largeCellID = "largeCellID"
+    let headerID = "HeaderID"
     
     var appCategories: [AppCategory]? 
 
@@ -26,6 +27,7 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
         collectionView?.backgroundColor = .white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellIdentifer)
         collectionView?.register(LargeCategoryCell.self, forCellWithReuseIdentifier: largeCellID)
+        collectionView?.register(Header.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerID)
         
     }
 
@@ -58,6 +60,17 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
             return CGSize(width: view.frame.width, height: 160)
         }
         return CGSize(width: view.frame.width, height: 230)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 150)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! Header
+        
+        header.appCategory = appCategories?.first
+        return header
     }
     
 }
