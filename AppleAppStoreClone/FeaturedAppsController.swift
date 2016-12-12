@@ -11,6 +11,7 @@ import UIKit
 class FeaturedAppsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellIdentifer = "cellID"
+    let largeCellID = "largeCellID"
     
     var appCategories: [AppCategory]? 
 
@@ -24,6 +25,7 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
        
         collectionView?.backgroundColor = .white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellIdentifer)
+        collectionView?.register(LargeCategoryCell.self, forCellWithReuseIdentifier: largeCellID)
         
     }
 
@@ -35,14 +37,26 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellID, for: indexPath) as! LargeCategoryCell
+            cell.appCategory = appCategories?[indexPath.row]
+            return cell
+        }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifer, for: indexPath) as! CategoryCell
         
-        cell.appCategory = appCategories?[indexPath.row]
+           cell.appCategory = appCategories?[indexPath.row]
         
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.item == 2 {
+            return CGSize(width: view.frame.width, height: 160)
+        }
         return CGSize(width: view.frame.width, height: 230)
     }
     

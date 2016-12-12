@@ -16,6 +16,8 @@
 		FB6779DC1DF898CB00E23C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6779DA1DF898CB00E23C22 /* LaunchScreen.storyboard */; };
 		FB6779E71DF898CC00E23C22 /* AppleAppStoreCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6779E61DF898CC00E23C22 /* AppleAppStoreCloneTests.swift */; };
 		FB72C1661DF98272008D1844 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72C1651DF98272008D1844 /* AppCell.swift */; };
+		FBC9743D1DFE511D00E6FB23 /* LargeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9743C1DFE511D00E6FB23 /* LargeCategoryCell.swift */; };
+		FBC9743F1DFE535100E6FB23 /* LargeAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9743E1DFE535100E6FB23 /* LargeAppCell.swift */; };
 		FBE35C761DFDB13000B13606 /* AppCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE35C751DFDB13000B13606 /* AppCategory.swift */; };
 		FBE35C781DFDB17300B13606 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE35C771DFDB17300B13606 /* App.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		FB6779E61DF898CC00E23C22 /* AppleAppStoreCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAppStoreCloneTests.swift; sourceTree = "<group>"; };
 		FB6779E81DF898CC00E23C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB72C1651DF98272008D1844 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		FBC9743C1DFE511D00E6FB23 /* LargeCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeCategoryCell.swift; sourceTree = "<group>"; };
+		FBC9743E1DFE535100E6FB23 /* LargeAppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeAppCell.swift; sourceTree = "<group>"; };
 		FBE35C751DFDB13000B13606 /* AppCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCategory.swift; sourceTree = "<group>"; };
 		FBE35C771DFDB17300B13606 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +127,8 @@
 			children = (
 				FB72C1651DF98272008D1844 /* AppCell.swift */,
 				FB1058E51DF8A1A10022D7B2 /* CategoryCell.swift */,
+				FBC9743C1DFE511D00E6FB23 /* LargeCategoryCell.swift */,
+				FBC9743E1DFE535100E6FB23 /* LargeAppCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -241,8 +247,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB72C1661DF98272008D1844 /* AppCell.swift in Sources */,
+				FBC9743F1DFE535100E6FB23 /* LargeAppCell.swift in Sources */,
 				FB6779D11DF898CB00E23C22 /* FeaturedAppsController.swift in Sources */,
 				FB6779D71DF898CB00E23C22 /* AppleAppStoreClone.xcdatamodeld in Sources */,
+				FBC9743D1DFE511D00E6FB23 /* LargeCategoryCell.swift in Sources */,
 				FB6779CF1DF898CB00E23C22 /* AppDelegate.swift in Sources */,
 				FB1058E61DF8A1A10022D7B2 /* CategoryCell.swift in Sources */,
 				FBE35C781DFDB17300B13606 /* App.swift in Sources */,
