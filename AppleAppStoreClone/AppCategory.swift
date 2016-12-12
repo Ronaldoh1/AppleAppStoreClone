@@ -29,7 +29,7 @@ class AppCategory: NSObject {
         }
     }
     
-    static func fetchFeaturedApps(completionHandler: @escaping ([AppCategory]) -> ()) {
+    static func fetchFeaturedApps(completionHandler: @escaping (FeaturedApps) -> ()) {
         let urlString = "http://www.statsallday.com/appstore/featured"
         URLSession.shared.dataTask(with: URL(string: urlString)!) { (data, response, error) in
             
@@ -39,24 +39,16 @@ class AppCategory: NSObject {
             }
             do {
             
-                guard let json = try(JSONSerialization.jsonObject(with: data!, options: .mutableContainers)) as? [[String : AnyObject]]  else {
-                    return
-                }
+              let  json = try(JSONSerialization.jsonObject(with: data!, options: .mutableContainers))
+              
                 
+                let featuredApps = FeaturedApps()
                 
+                FeaturedApps.setValuesForKeys(json as! [String : Any])
                 
-            var appCategories = [AppCategory]()
-                
-                for dict in json["categories"] {
-                    let appCategory = AppCategory()
-                    appCategory.setValuesForKeys()
-                    appCategories.append(appCategory)
-                    
-                    
-                }
                 
                 DispatchQueue.main.async {
-                   completionHandler(appCategories)
+                   completionHandler(featuredApps)
                 }
             
                 
